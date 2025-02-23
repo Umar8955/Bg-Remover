@@ -1,0 +1,45 @@
+[debug] [2025-02-23T14:32:47.922Z] ----------------------------------------------------------------------
+[debug] [2025-02-23T14:32:47.930Z] Command:       /usr/bin/node /bin/firebase deploy
+[debug] [2025-02-23T14:32:47.931Z] CLI Version:   13.31.2
+[debug] [2025-02-23T14:32:47.932Z] Platform:      linux
+[debug] [2025-02-23T14:32:47.933Z] Node Version:  v20.18.3
+[debug] [2025-02-23T14:32:47.933Z] Time:          Sun Feb 23 2025 19:32:47 GMT+0500 (Maldives Time)
+[debug] [2025-02-23T14:32:47.934Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-02-23T14:32:48.649Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-02-23T14:32:48.651Z] > authorizing via signed-in user (usus7073@gmail.com)
+[debug] [2025-02-23T14:32:48.652Z] [iam] checking project umar-e792c for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-02-23T14:32:48.655Z] Checked if tokens are valid: true, expires at: 1740324623800
+[debug] [2025-02-23T14:32:48.656Z] Checked if tokens are valid: true, expires at: 1740324623800
+[debug] [2025-02-23T14:32:48.660Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/umar-e792c:testIamPermissions [none]
+[debug] [2025-02-23T14:32:48.660Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/umar-e792c:testIamPermissions x-goog-quota-user=projects/umar-e792c
+[debug] [2025-02-23T14:32:48.661Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/umar-e792c:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-02-23T14:32:51.189Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/umar-e792c:testIamPermissions 200
+[debug] [2025-02-23T14:32:51.189Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/umar-e792c:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-02-23T14:32:51.190Z] Checked if tokens are valid: true, expires at: 1740324623800
+[debug] [2025-02-23T14:32:51.191Z] Checked if tokens are valid: true, expires at: 1740324623800
+[debug] [2025-02-23T14:32:51.191Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/umar-e792c/serviceAccounts/umar-e792c@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2025-02-23T14:32:51.192Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/umar-e792c/serviceAccounts/umar-e792c@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2025-02-23T14:32:53.026Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/umar-e792c/serviceAccounts/umar-e792c@appspot.gserviceaccount.com:testIamPermissions 404
+[debug] [2025-02-23T14:32:53.027Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/umar-e792c/serviceAccounts/umar-e792c@appspot.gserviceaccount.com:testIamPermissions {"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}}
+[debug] [2025-02-23T14:32:53.033Z] [functions] service account IAM check errored, deploy may fail: Request to https://iam.googleapis.com/v1/projects/umar-e792c/serviceAccounts/umar-e792c@appspot.gserviceaccount.com:testIamPermissions had HTTP Error: 404, Unknown service account {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":404,"message":"Unknown service account","status":"NOT_FOUND"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://iam.googleapis.com/v1/projects/umar-e792c/serviceAccounts/umar-e792c@appspot.gserviceaccount.com:testIamPermissions had HTTP Error: 404, Unknown service account","status":404}
+[debug] [2025-02-23T14:32:53.059Z] Checked if tokens are valid: true, expires at: 1740324623800
+[debug] [2025-02-23T14:32:53.061Z] Checked if tokens are valid: true, expires at: 1740324623800
+[debug] [2025-02-23T14:32:53.063Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/umar-e792c [none]
+[debug] [2025-02-23T14:32:53.983Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/umar-e792c 200
+[debug] [2025-02-23T14:32:53.983Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/umar-e792c {"projectId":"umar-e792c","projectNumber":"169268975203","displayName":"Umar","name":"projects/umar-e792c","resources":{"hostingSite":"umar-e792c"},"state":"ACTIVE","etag":"1_227d6877-ca5a-4e3d-86b6-5410879b067d"}
+[info] 
+[info] === Deploying to 'umar-e792c'...
+[info] 
+[info] i  deploying firestore, functions, hosting 
+[debug] [2025-02-23T14:32:54.966Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+    at Object.join (node:path:1269:7)
+    at Config.path (/usr/lib/node_modules/firebase-tools/lib/config.js:130:45)
+    at getChildEnvironment (/usr/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:57:49)
+    at runTargetCommands (/usr/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:78:14)
+    at /usr/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:152:24
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async chain (/usr/lib/node_modules/firebase-tools/lib/deploy/index.js:40:9)
+    at async deploy (/usr/lib/node_modules/firebase-tools/lib/deploy/index.js:99:5)
+[error] 
+[error] Error: An unexpected error has occurred.

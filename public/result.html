@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="logo">YourLogo</a>
+        <div class="back-btn">←</div>
+        <div class="settings" onclick="window.location.href='my-account.html'">⋮</div>
+    </div>
+    <div class="main-content">
+        <div class="image-view-box">
+            <canvas id="resultCanvas" width="800" height="600"></canvas>
+            <img class="custom-background" id="customBackground" src="" alt="Custom Background" style="display: none;">
+            <div class="loading-animation" id="loading"></div>
+        </div>
+    </div>
+    <div class="navigation-bar" id="buttonContainer">
+        <button class="button download-btn" draggable="true" onclick="downloadImage()">↓</button>
+        <button class="button hd-btn" draggable="true" onclick="downloadHD()">HD</button>
+        <button class="button custom-bg-btn" draggable="true" onclick="window.location.href='custom-bg.html'">+</button>
+        <button class="button extra-btn" draggable="true" onclick="extraAction1()">✨</button>
+        <button class="button extra-btn" draggable="true" onclick="extraAction2()">⚙</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.9.0/dist/tf.min.js"></script>
+    <script src="https://docs.opencv.org/4.5.3/opencv.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/ui.js"></script>
+</body>
+</html>

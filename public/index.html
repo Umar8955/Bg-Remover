@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header">
+        <a href="#" class="logo">YourLogo</a>
+        <div class="settings" onclick="window.location.href='my-account.html'">⋮</div>
+    </div>
+    <div class="main-content">
+        <div class="upload-icon">✚</div>
+        <div class="upload-text">Upload an image to remove the background</div>
+        <button class="upload-btn" onclick="window.location.href='result.html'">Upload Image</button>
+        <div class="sample-text">No image? Try one of these:</div>
+        <div class="sample-images">
+            <img src="images/sample1.jpg" alt="Sample 1">
+            <img src="images/sample2.jpg" alt="Sample 2">
+            <img src="images/sample3.jpg" alt="Sample 3">
+            <img src="images/sample4.jpg" alt="Sample 4">
+        </div>
+        <div class="footer-text">
+            By uploading an image or URL, you agree to our <a href="privacy.html">Terms of Service</a>. To learn more about how we handle your personal data, check our <a href="privacy.html">Privacy Policy</a>.
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

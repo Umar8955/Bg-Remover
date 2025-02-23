@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Background</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="logo">YourLogo</a>
+        <div class="back-btn">←</div>
+        <div class="settings" onclick="window.location.href='my-account.html'">⋮</div>
+    </div>
+    <div class="main-content">
+        <div class="upload-section">
+            <button class="upload-btn" onclick="document.getElementById('fileInput').click()">Upload Custom Background</button>
+            <input type="file" id="fileInput" accept="image/*" style="display: none;" onchange="previewImage(this)">
+        </div>
+        <div class="backgrounds-grid">
+            <div class="background-item" onclick="applyBackground('images/bg1.jpg')"><img src="images/bg1.jpg" alt="Background 1"></div>
+            <div class="background-item" onclick="applyBackground('images/bg2.jpg')"><img src="images/bg2.jpg" alt="Background 2"></div>
+            <div class="background-item" onclick="applyBackground('images/bg3.jpg')"><img src="images/bg3.jpg" alt="Background 3"></div>
+            <div class="background-item" onclick="applyBackground('images/bg4.jpg')"><img src="images/bg4.jpg" alt="Background 4"></div>
+            <div class="background-item" onclick="applyBackground('images/bg5.jpg')"><img src="images/bg5.jpg" alt="Background 5"></div>
+            <div class="background-item" onclick="applyBackground('images/bg6.jpg')"><img src="images/bg6.jpg" alt="Background 6"></div>
+            <div class="background-item" onclick="applyBackground('images/bg7.jpg')"><img src="images/bg7.jpg" alt="Background 7"></div>
+            <div class="background-item" onclick="applyBackground('images/bg8.jpg')"><img src="images/bg8.jpg" alt="Background 8"></div>
+            <div class="background-item" onclick="applyBackground('images/bg9.jpg')"><img src="images/bg9.jpg" alt="Background 9"></div>
+            <div class="background-item" onclick="applyBackground('images/bg10.jpg')"><img src="images/bg10.jpg" alt="Background 10"></div>
+        </div>
+    </div>
+    <div class="navigation-bar">
+        <button class="button apply-btn" onclick="applySelectedBackground()">✔</button>
+        <button class="button cancel-btn" onclick="window.location.href='result.html'">✖</button>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/ui.js"></script>
+</body>
+</html>
