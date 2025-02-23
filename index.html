@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YourLogo - Background Remover</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header>
+    <h1>YourLogo</h1>
+    <nav>
+      <a href="/" onclick="navigate('/')">Home</a>
+      <a href="/result" onclick="navigate('/result')">Result</a>
+      <a href="/custom-bg" onclick="navigate('/custom-bg')">Custom BG</a>
+      <a href="/my-account" onclick="navigate('/my-account')">My Account</a>
+      <a href="/help" onclick="navigate('/help')">Help</a>
+    </nav>
+  </header>
+  <main id="pageContent">
+    <section>
+      <h2>Upload an image to remove the background</h2>
+      <input type="file" id="uploadImage" accept="image/*">
+      <button onclick="uploadAndNavigate()">Upload Image</button>
+      <p>Need an image? Try one of these:</p>
+      <div class="samples">
+        <a href="images/sample1.jpg" download>Sample 1</a>
+        <a href="images/sample2.jpg" download>Sample 2</a>
+        <a href="images/sample3.jpg" download>Sample 3</a>
+        <a href="images/sample4.jpg" download>Sample 4</a>
+      </div>
+      <p>By uploading an image or URL, you agree to our <a href="/terms" onclick="navigate('/terms')">Terms of Service</a>. To learn more about how we handle your personal data, check our <a href="/privacy" onclick="navigate('/privacy')">Privacy Policy</a>.</p>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 YourLogo. All rights reserved.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.0.0/dist/tf.min.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>

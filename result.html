@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Result - Background Removed</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header>
+    <h1>YourLogo</h1>
+    <nav>
+      <a href="/" onclick="navigate('/')">Home</a>
+      <a href="/result" onclick="navigate('/result')">Result</a>
+      <a href="/custom-bg" onclick="navigate('/custom-bg')">Custom BG</a>
+      <a href="/my-account" onclick="navigate('/my-account')">My Account</a>
+      <a href="/help" onclick="navigate('/help')">Help</a>
+    </nav>
+  </header>
+  <main id="pageContent">
+    <section>
+      <h2>Your Background Removed Image</h2>
+      <img id="resultImage" alt="Background Removed Image">
+      <button onclick="downloadResult()">Download Image</button>
+      <button onclick="navigate('/custom-bg')">Set Custom Background</button>
+      <a href="/" onclick="navigate('/')">Back to Home</a>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 YourLogo. All rights reserved.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.0.0/dist/tf.min.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/ui.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      loadResultImage();
+    });
+  </script>
+</body>
+</html>

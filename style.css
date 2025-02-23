@@ -1,0 +1,14 @@
+/* موجودہ CSS میں یہ شامل کریں */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* صرف ایک پیج دکھانے کے لیے */
+}
+
+#pageContent {
+  display: block; /* ڈیفالٹ طور پر دکھائی دیں */
+}
+
+.hidden {
+  display: none !important; /* پیج کو چھپانے کے لیے */
+}
