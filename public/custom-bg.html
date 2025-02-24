@@ -1,42 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Background</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YourLogo - Custom Background</title>
+  <link rel="stylesheet" href="css/custom-bg.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="header">
-        <a href="index.html" class="logo">YourLogo</a>
-        <div class="back-btn">←</div>
-        <div class="settings" onclick="window.location.href='my-account.html'">⋮</div>
-    </div>
-    <div class="main-content">
-        <div class="upload-section">
-            <button class="upload-btn" onclick="document.getElementById('fileInput').click()">Upload Custom Background</button>
-            <input type="file" id="fileInput" accept="image/*" style="display: none;" onchange="previewImage(this)">
+  <header class="text-center py-3 bg-dark">
+    <h1 class="text-white">YourLogo</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link text-white" href="/" onclick="navigate('/')">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="/result" onclick="navigate('/result')">Result</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="/custom-bg" onclick="navigate('/custom-bg')">Custom BG</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="/my-account" onclick="navigate('/my-account')">My Account</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="/help" onclick="navigate('/help')">Help</a></li>
+          </ul>
         </div>
-        <div class="backgrounds-grid">
-            <div class="background-item" onclick="applyBackground('images/bg1.jpg')"><img src="images/bg1.jpg" alt="Background 1"></div>
-            <div class="background-item" onclick="applyBackground('images/bg2.jpg')"><img src="images/bg2.jpg" alt="Background 2"></div>
-            <div class="background-item" onclick="applyBackground('images/bg3.jpg')"><img src="images/bg3.jpg" alt="Background 3"></div>
-            <div class="background-item" onclick="applyBackground('images/bg4.jpg')"><img src="images/bg4.jpg" alt="Background 4"></div>
-            <div class="background-item" onclick="applyBackground('images/bg5.jpg')"><img src="images/bg5.jpg" alt="Background 5"></div>
-            <div class="background-item" onclick="applyBackground('images/bg6.jpg')"><img src="images/bg6.jpg" alt="Background 6"></div>
-            <div class="background-item" onclick="applyBackground('images/bg7.jpg')"><img src="images/bg7.jpg" alt="Background 7"></div>
-            <div class="background-item" onclick="applyBackground('images/bg8.jpg')"><img src="images/bg8.jpg" alt="Background 8"></div>
-            <div class="background-item" onclick="applyBackground('images/bg9.jpg')"><img src="images/bg9.jpg" alt="Background 9"></div>
-            <div class="background-item" onclick="applyBackground('images/bg10.jpg')"><img src="images/bg10.jpg" alt="Background 10"></div>
+      </div>
+    </nav>
+  </header>
+  <main class="container my-5 text-center">
+    <div class="custom-bg-section">
+      <h2>Choose a Custom Background</h2>
+      <div class="backgrounds-grid">
+        <div class="background-item" onclick="applyBackground('images/bg1.jpg')">
+          <img src="images/bg1.jpg" alt="Background 1">
         </div>
+        <div class="background-item" onclick="applyBackground('images/bg2.jpg')">
+          <img src="images/bg2.jpg" alt="Background 2">
+        </div>
+        <!-- Add more background images as needed -->
+      </div>
+      <button class="btn btn-success mt-3" onclick="saveCustomBackground()">Apply Background</button>
+      <button class="btn btn-secondary mt-3" onclick="navigate('/result')">Cancel</button>
     </div>
-    <div class="navigation-bar">
-        <button class="button apply-btn" onclick="applySelectedBackground()">✔</button>
-        <button class="button cancel-btn" onclick="window.location.href='result.html'">✖</button>
-    </div>
-
-    <script src="js/app.js"></script>
-    <script src="js/ui.js"></script>
+  </main>
+  <footer class="text-center py-3 bg-dark text-white">
+    <p>© 2025 YourLogo. All rights reserved.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.0.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/custom-bg.js"></script>
+  <script src="js/navigation.js"></script>
 </body>
 </html>
