@@ -1,21 +1,124 @@
+/* Result-specific styles */
+body {
+  background-color: #ffffff;
+}
+
+.navbar-toggler-icon {
+  font-size: 24px;
+  color: #ffffff;
+}
+
 .result-section {
   max-width: 800px;
   margin: 0 auto;
 }
 
-.result-section img {
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.image-view-box {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0;
+  overflow: hidden;
+  position: relative;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAO0lEQVQ4T2NkwAT/GPwYBj7w0LD8O/DgwLAD8O/Dg2Pjw4Njw8PDw+PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PAAAMPvB9sJ3q4IAAAAASUVORK5CYII=') repeat;
 }
 
-.btn-success {
+.image-view-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 80vh;
+}
+
+.loading-animation {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.navigation-bar {
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  gap: 20px;
+}
+
+.button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  background-color: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.download-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.hd-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.custom-bg-btn {
+  background-color: transparent;
+  color: #000;
+}
+
+.apply-btn {
   background-color: #28a745;
-  border-color: #28a745;
+  color: white;
 }
 
-.btn-success:hover {
-  background-color: #218838;
-  border-color: #218838;
+.cancel-btn {
+  background-color: transparent;
+  color: #000;
+}
+
+.navbar-collapse {
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-collapse.collapsing {
+  opacity: 0;
+  height: 0;
+}
+
+.navbar-collapse.show {
+  opacity: 1;
+  height: auto;
 }
 
 @media (max-width: 768px) {
@@ -23,8 +126,14 @@
     max-width: 100%;
   }
 
-  .btn {
-    width: 100%;
-    margin: 5px 0;
+  .button {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .navigation-bar {
+    padding: 5px 10px;
+    gap: 10px;
   }
 }
