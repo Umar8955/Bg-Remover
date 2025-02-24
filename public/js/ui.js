@@ -17,6 +17,17 @@ function uploadAndNavigate() {
   const fileInput = document.getElementById('uploadImage');
   if (fileInput?.files.length > 0) {
     removeBackground(fileInput.files[0]).then(() => {
+      navigate('/result');
+    });
+  } else {
+    alert('Please select an image.');
+  }
+}
+
+function uploadAndNavigate() {
+  const fileInput = document.getElementById('uploadImage');
+  if (fileInput?.files.length > 0) {
+    removeBackground(fileInput.files[0]).then(() => {
       navigate('/result'); // رزلٹ پیج پر جائیں
     });
   } else {
