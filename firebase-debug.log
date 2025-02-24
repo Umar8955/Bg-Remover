@@ -133,3 +133,28 @@
 [debug] [2025-02-24T02:58:10.316Z] Checked if tokens are valid: true, expires at: 1740369388420
 [debug] [2025-02-24T02:58:10.318Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/umar-e792c/versions/e812911373c94eca updateMask=status%2Cconfig
 [debug] [2025-02-24T02:58:10.318Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/umar-e792c/versions/e812911373c94eca {"status":"FINALIZED","config":{"rewrites":[{"glob":"/","path":"/index.html"},{"glob":"/result","path":"/result.html"},{"glob":"/custom-bg","path":"/custom-bg.html"},{"glob":"/my-account","path":"/my-account.html"},{"glob":"/help","path":"/help.html"},{"glob":"/privacy","path":"/privacy.html"},{"glob":"/contact","path":"/contact.html"},{"glob":"/terms","path":"/terms.html"},{"glob":"**","path":"/index.html"}]}}
+[debug] [2025-02-24T03:14:10.895Z] ----------------------------------------------------------------------
+[debug] [2025-02-24T03:14:10.914Z] Command:       /usr/bin/node /bin/firebase deploy --only hosting
+[debug] [2025-02-24T03:14:10.916Z] CLI Version:   13.31.2
+[debug] [2025-02-24T03:14:10.916Z] Platform:      linux
+[debug] [2025-02-24T03:14:10.917Z] Node Version:  v20.18.3
+[debug] [2025-02-24T03:14:10.917Z] Time:          Mon Feb 24 2025 08:14:10 GMT+0500 (Maldives Time)
+[debug] [2025-02-24T03:14:10.918Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-02-24T03:14:11.616Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-02-24T03:14:11.618Z] > authorizing via signed-in user (usus7073@gmail.com)
+[debug] [2025-02-24T03:14:11.619Z] [iam] checking project umar-e792c for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-02-24T03:14:11.624Z] Checked if tokens are valid: true, expires at: 1740369388420
+[debug] [2025-02-24T03:14:11.624Z] Checked if tokens are valid: true, expires at: 1740369388420
+[debug] [2025-02-24T03:14:11.628Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/umar-e792c:testIamPermissions [none]
+[debug] [2025-02-24T03:14:11.628Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/umar-e792c:testIamPermissions x-goog-quota-user=projects/umar-e792c
+[debug] [2025-02-24T03:14:11.629Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/umar-e792c:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-02-24T03:14:17.281Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/umar-e792c:testIamPermissions 200
+[debug] [2025-02-24T03:14:17.283Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/umar-e792c:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-02-24T03:14:17.291Z] Checked if tokens are valid: true, expires at: 1740369388420
+[debug] [2025-02-24T03:14:17.292Z] Checked if tokens are valid: true, expires at: 1740369388420
+[debug] [2025-02-24T03:14:17.293Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/umar-e792c [none]
+[debug] [2025-02-24T03:15:47.766Z] *** [apiv2] error from fetch(https://firebase.googleapis.com/v1beta1/projects/umar-e792c, {"headers":{},"method":"GET","signal":{}}): AbortError: The user aborted a request.
+[debug] [2025-02-24T03:15:47.767Z] Timeout reached making request to https://firebase.googleapis.com/v1beta1/projects/umar-e792c (original: The user aborted a request.)
+[error] 
+[error] Error: Assertion failed: resolving hosting target of a site with no site name or target name. This should have caused an error earlier
