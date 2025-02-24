@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "umar-e792c",
     "public": "public",
     "ignore": [
       "firebase.json",
