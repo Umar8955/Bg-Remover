@@ -1,67 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YourLogo - Home</title>
-  <link rel="stylesheet" href="css/home.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourLogo - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="text-center py-3 bg-dark">
-    <h1 class="text-white">YourLogo</h1>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon">≡</span>
+    <header class="text-center bg-dark">
+        <h1 class="text-white mb-0 py-2">YourLogo</h1>
+        <button class="hamburger-btn" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item"><a class="nav-link text-white" href="/" onclick="navigate('/')">Home</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="/my-account" onclick="navigate('/my-account')">My Account</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="/help" onclick="navigate('/help')">Help</a></li>
-          </ul>
+    </header>
+
+    <div id="sideMenu" class="side-menu" role="navigation">
+        <div class="side-menu-header">
+            <h3>Menu</h3>
+            <button class="close-btn" aria-label="Close menu">×</button>
         </div>
-      </div>
-    </nav>
-  </header>
-  <main class="container my-5 text-center">
-    <div class="d-flex justify-content-center align-items-center flex-column">
-      <span class="display-4 mb-4" style="font-weight: bold;">Upload an image to remove the background</span>
-      <input type="file" id="uploadImage" accept="image/*" style="display: none;" onchange="uploadAndShowLoading()">
-      <button class="btn btn-primary btn-lg rounded-pill px-5 py-3 mb-4" onclick="document.getElementById('uploadImage').click()">
-        <span class="me-2">+</span> Upload Image
-      </button>
-      <div id="loading" class="loading-animation" style="display: none;"></div>
-      <p class="text-muted mb-3">No image? Try one of these:</p>
-      <div class="d-flex justify-content-center gap-3 mb-4">
-        <a href="images/sample1.jpg" download class="btn btn-outline-secondary rounded-circle p-2" style="width: 60px; height: 60px; overflow: hidden;">
-          <img src="images/sample1.jpg" alt="Sample 1" class="img-fluid" style="object-fit: cover;">
-        </a>
-        <a href="images/sample2.jpg" download class="btn btn-outline-secondary rounded-circle p-2" style="width: 60px; height: 60px; overflow: hidden;">
-          <img src="images/sample2.jpg" alt="Sample 2" class="img-fluid" style="object-fit: cover;">
-        </a>
-        <a href="images/sample3.jpg" download class="btn btn-outline-secondary rounded-circle p-2" style="width: 60px; height: 60px; overflow: hidden;">
-          <img src="images/sample3.jpg" alt="Sample 3" class="img-fluid" style="object-fit: cover;">
-        </a>
-        <a href="images/sample4.jpg" download class="btn btn-outline-secondary rounded-circle p-2" style="width: 60px; height: 60px; overflow: hidden;">
-          <img src="images/sample4.jpg" alt="Sample 4" class="img-fluid" style="object-fit: cover;">
-        </a>
-      </div>
-      <p class="text-muted small">
-        By uploading an image or URL, you agree to our 
-        <a href="/terms" onclick="navigate('/terms')">Terms of Service</a>. 
-        To learn more about how we handle your personal data, check our 
-        <a href="/privacy" onclick="navigate('/privacy')">Privacy Policy</a>.
-      </p>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <i>👤</i>
+                <a href="#" data-page="/my-account">My Account</a>
+            </li>
+            <li class="list-group-item">
+                <i>❓</i>
+                <a href="#" data-page="/help">Help Center</a>
+            </li>
+            <li class="list-group-item">
+                <i>🔒</i>
+                <a href="#" data-page="/privacy">Privacy Policy</a>
+            </li>
+        </ul>
     </div>
-  </main>
-  <footer class="text-center py-3 bg-dark text-white">
-    <p>© 2025 YourLogo. All rights reserved.</p>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.0.0/dist/tf.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/home.js"></script>
-  <script src="js/navigation.js"></script>
+
+    <main class="container my-5 text-center">
+        <div class="d-flex flex-column align-items-center">
+            <h2 class="display-4 mb-4 fw-bold">Remove Background Instantly</h2>
+            <div class="upload-container">
+                <input type="file" id="uploadImage" accept="image/*" class="visually-hidden">
+                <button class="btn enhanced-upload-btn rounded-pill mb-3">
+                    <span class="me-2">+</span> Upload Image
+                </button>
+            </div>
+
+            <p class="text-muted mb-3">Try our sample images:</p>
+            
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" class="sample-image img-fluid rounded" alt="Sample 1" data-sample="sample1.jpg">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" class="sample-image img-fluid rounded" alt="Sample 2" data-sample="sample2.jpg">
+                <img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b" class="sample-image img-fluid rounded" alt="Sample 3" data-sample="sample3.jpg">
+                <img src="https://images.unsplash.com/photo-1476990789491-712b869b91a5" class="sample-image img-fluid rounded" alt="Sample 4" data-sample="sample4.jpg">
+            </div>
+            <p class="text-muted small">
+                By uploading, you agree to our 
+                <a href="/terms">Terms</a> and 
+                <a href="/privacy">Privacy Policy</a>.
+            </p>
+        </div>
+    </main>
+    
+    <footer class="text-center py-3 text-white">
+        <p>© 2025 YourLogo. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 </html>
